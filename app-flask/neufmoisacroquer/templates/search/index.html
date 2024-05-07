@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Search{% endblock %}
+
+{% block body %}
+
+
+
+<h1 class="text-center mb-5">Recherche</h1>
+
+
+
+<form action="" method="post">
+	<div class="mb-3">
+		<label class="form-label" for="query">Recherche:</label>
+		<input class="form-control" type="text" name="query" value="">
+	</div>
+	<button type="submit" class="btn btn-outline-secondary">Rechercher</button>
+</form>
+
+
+
+{% if resultats %}
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">Réponse</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for resultat in resultats %} {# attention au pluriel #}
+		<tr>
+			<td>{{ resultat }}</td>
+		</tr>
+		{% endfor%}
+	</tbody>
+</table>
+{% else %}
+<p class="text-center">Pas encore de résultat de recherche</p>
+</table>
+{% endif %}
+
+
+
+{% endblock %}

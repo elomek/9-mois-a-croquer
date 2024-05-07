@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeiliSearch API with Flask</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MeiliSearch API with Flask</h1>
+    
+    <form id="search-form">
+        <label for="query">Rechercher :</label>
+        <input type="text" id="query" name="query" required>
+        <button type="submit">Rechercher</button>
+    </form>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        document.getElementById('search-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const query = document.getElementById('query').value;
+            search(query);
+        });
+
+        function search(query) {
+            // Ajoutez ici la logique pour effectuer la recherche et mettre à jour l'interface utilisateur
+            // par exemple, en utilisant fetch() pour interroger votre API Flask
+            // et en mettant à jour le contenu de l'élément avec l'ID "result".
+        }
+    </script>
+</body>
+</html>
+
